@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Bug as FrogIcon } from 'lucide-react';
+import Frog from './Frog';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,7 +24,15 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <FrogIcon className="text-froggy-green h-10 w-10" />
+            <div className="h-10 w-10 flex items-center">
+              <Frog 
+                size="sm" 
+                usePng={true}
+                imageUrl="/images/frogs/frog-normal.png"
+                animated={false}
+                className="scale-110"
+              />
+            </div>
             <span className="font-bold text-2xl text-froggy-dark-green">$FROGGY</span>
           </div>
           

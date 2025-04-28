@@ -40,9 +40,6 @@ function App() {
             <span className="text-gradient"> Feeling Froggy</span>,<br />
             Then <span className="relative inline-block">
               LEAP!
-              <svg className="absolute -top-4 -right-4 w-8 h-8 text-froggy-green animate-bounce-slow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-              </svg>
             </span>
           </h1>
           
