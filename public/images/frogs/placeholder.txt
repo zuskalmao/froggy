@@ -1,0 +1,2 @@
+This is a placeholder file to ensure the frogs directory is created in your repository.
+Replace this with your actual frog PNG images.

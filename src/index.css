@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --froggy-green: #7ED957;
+  --froggy-dark-green: #48A14D;
+  --froggy-tan: #F5EFD7;
+  --froggy-blue: #A8D8E8;
+  --froggy-dark-blue: #5BAFCA;
+}
+
+body {
+  font-family: 'Fredoka', sans-serif;
+  background-color: var(--froggy-tan);
+  overflow-x: hidden;
+}
+
+.lily-pad {
+  position: relative;
+}
+
+.lily-pad::before {
+  content: '';
+  position: absolute;
+  background-color: rgba(126, 217, 87, 0.3);
+  border-radius: 100%;
+  width: 100%;
+  height: 20px;
+  bottom: -10px;
+  left: 0;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+.water-ripple {
+  background: var(--froggy-blue);
+  position: relative;
+  overflow: hidden;
+}
+
+.water-ripple::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='ripple' patternUnits='userSpaceOnUse' width='100' height='10' patternTransform='rotate(0)'%3E%3Cpath d='M0 5 Q 25 0, 50 5 T 100 5' stroke='rgba(255,255,255,0.2)' fill='none'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23ripple)'/%3E%3C/svg%3E");
+  animation: ripple 5s linear infinite;
+}
+
+@keyframes ripple {
+  from { background-position: 0 0; }
+  to { background-position: 100px 0; }
+}
+
+.text-gradient {
+  background: linear-gradient(45deg, var(--froggy-dark-green), var(--froggy-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
